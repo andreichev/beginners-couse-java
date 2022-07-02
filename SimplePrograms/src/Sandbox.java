@@ -1,12 +1,15 @@
 import java.util.Scanner;
 
 public class Sandbox {
-    static int func(int x) {
-        System.out.println("FUNC START");
-        return x + 1;
-    }
-
     public static void main(String[] args) {
-        System.out.println("HELLO WORLD");
+        int[] x = new int[] {1, 9, 5, 3, 0, 7, 4, 2, 6, 7};
+
+        int maxIndex = x[0];
+        for (int i = 0; i < x.length; i++) {
+            if(x[i] >= x[maxIndex]) {
+                maxIndex = i;
+            }
+        }
+        System.out.println(maxIndex);
     }
 }
