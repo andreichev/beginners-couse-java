@@ -1,6 +1,8 @@
 package functions;
 
 public class Functions1 {
+    // 1 -
+
     public static void main(String[] args) {
         System.out.println("Мама я корову подоил на лугу я сено накосил");
         System.out.println("Мама я дровишек нарубил борова в сарае накормил");

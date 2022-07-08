@@ -2,8 +2,7 @@ package simple_programs;
 
 import java.util.Scanner;
 
-
-public class Task4 {
+public class Task6 {
     static int digitsCount(int number) {
         int result = 0;
         for (; number > 0; result++) {
@@ -24,21 +23,18 @@ public class Task4 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int dig = scanner.nextInt();
-        int[] num = makeArray(dig);
+        int number = scanner.nextInt();
+        int[] digits = makeArray(number);
 
-        for (int i = 0; i < num.length; i++) {
-            int c = 0;
-            for (int j = 0; j < num.length; j++) {
-                if (num[i] == num[j]) {
-                    c++;
+        for (int i = 0; i < digits.length; i++) {
+            for (int j = i + 1; j < digits.length; j++) {
+                if(digits[i] == digits[j]) {
+                    System.out.println("NO");
+                    return;
                 }
             }
-            if (c == 3){
-                System.out.println("Yes");
-                return;
-            }
         }
-        System.out.println("No");
+
+        System.out.println("YES");
     }
 }
