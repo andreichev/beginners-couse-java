@@ -1,0 +1,5 @@
+printAll
+save go_runing false
+save make_dinner false
+printAll
+exit

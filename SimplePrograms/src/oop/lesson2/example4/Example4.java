@@ -17,12 +17,14 @@ public class Example4 {
                 new Pigeon(),
                 new Chicken(),
                 new Pigeon(),
+                new Chicken(),
                 new Chicken()
         };
         for(Bird bird : array) {
             bird.printName();
         }
 
+        System.out.println(howManyChickens(array));
         // Chicken chicken = new Chicken();
         // needFlyingBird(chicken);
     }
@@ -33,5 +35,15 @@ public class Example4 {
 
     static void needBird(Bird b) {
         b.printName();
+    }
+
+    static int howManyChickens(Bird[] birds) {
+        int result = 0;
+        for (int i = 0; i < birds.length; i++) {
+            if(birds[i] instanceof Chicken) {
+                result++;
+            }
+        }
+        return result;
     }
 }
